@@ -1,0 +1,134 @@
+
+.float-y-effect {
+    animation: float-y 4s infinite cubic-bezier(0.25, 0.25, 0.75, 0.75);
+}
+
+
+/*  Custom Animation */
+
+@keyframes zoom-fade {
+    0% {
+      transform: scale(0.9);
+    }
+    50% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0.9);
+    }
+  }
+  @keyframes rotateme {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes rotateme2 {
+    from {
+      transform: rotateY(0deg);
+    }
+    to {
+      transform: rotateY(360deg);
+    }
+  }
+  @keyframes zoom-fade-two {
+    0% {
+      transform: scale(1.5);
+    }
+    50% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.5);
+    }
+  }
+  @keyframes float-y {
+    0% {
+      transform: translateY(0px);
+    }
+    25% {
+      transform: translateY(25px);
+    }
+    50% {
+      transform: translateY(50px);
+    }
+    70% {
+      transform: translateY(70px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  @keyframes float-x {
+    0% {
+      transform: translateX(0px);
+    }
+    25% {
+      transform: translateX(25px);
+    }
+    50% {
+      transform: translateX(50px);
+    }
+    70% {
+      transform: translateX(70px);
+    }
+    100% {
+      transform: translateX(0px);
+    }
+  }
+  @keyframes toTopFromBottom {
+    49% {
+      transform: translateY(-100%);
+    }
+    50% {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+    51% {
+      opacity: 1;
+    }
+  }
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  /** service-hexagon **/
+  @keyframes rotateRound {
+    0% {
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+  }
+  100% {
+      -webkit-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+  }
+  }
+  
+  
+  @keyframes float-my {
+    0% {
+      transform: translateY(0px);
+    }
+    25% {
+      transform: translateY(-25px);
+    }
+    50% {
+      transform: translateY(-50px);
+    }
+    70% {
+      transform: translateY(-70px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }

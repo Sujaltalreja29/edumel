@@ -1,0 +1,128 @@
+
+
+/*-------------------
+BUTTONS STYLE
+----------------=----*/
+
+.btn {
+    font-weight: 600;
+    position: relative;
+    text-transform: capitalize;
+    padding:14px 30px;
+    border-radius: 0px;
+    font-size: 16px;
+    border: 2px solid transparent;
+    -webkit-transition: all 0.6s ease;
+    -moz-transition: all 0.6s ease;
+      -ms-transition: all 0.6s ease;
+      -o-transition: all 0.6s ease;
+          transition: all 0.6s ease;
+  }
+  
+  .btn:focus {
+    box-shadow: none !important
+  }
+  
+  .btn-radius{
+    border-radius: 35px;
+  }
+  
+  .btn-main{
+    background:var(--theme-primary-color);
+    color: #fff;
+    border-color:var(--theme-primary-color);
+    &:hover{
+      border-color:var(--theme-secondary-color);
+      color: #fff;
+      background:var(--theme-secondary-color);
+    }
+    
+  }
+  
+  .btn-main-2{
+    border-color:var(--theme-secondary-color);
+    color: #fff;
+    background:var(--theme-secondary-color);
+    &:hover{
+        background:var(--theme-primary-color);
+        color: #fff;
+        border-color:var(--theme-primary-color);
+    }
+  }
+  
+  .btn-main-outline{
+    background:transparent;
+    color:var(--theme-primary-color);
+    border-color:var(--theme-primary-color);
+  
+    &:hover{
+      background:var(--theme-primary-color);
+      color: #fff;
+      border-color:var(--theme-primary-color);
+    }
+  }
+
+  .btn-main2-outline{
+    background:transparent;
+    color:#fff;
+    border-color:var(--theme-primary-color);
+  
+    &:hover{
+      background:var(--theme-primary-color);
+      color: #fff;
+      border-color:var(--theme-primary-color);
+    }
+  }
+  
+  .btn-white{
+    background:#fff;
+    border-color: #fff;
+    color:var(--theme-primary-color);
+    &:hover{
+      border-color:var(--theme-primary-color);
+      color: #fff;
+      background:var(--theme-primary-color);
+    }
+  }
+  
+  .btn-white-outline{
+    background:transparent;
+    border-color: #fff;
+    color:#fff;
+    &:hover{
+      border-color:var(--theme-primary-color);
+      color: #fff;
+      background:var(--theme-primary-color);
+    }
+  }
+
+  .btn-grey{
+    border-color: #ddd;
+    color: #222;
+    background: #ddd;
+
+    &:hover{
+      border-color:var(--theme-primary-color);
+      color: #fff;
+      background:var(--theme-primary-color);
+    }
+  }
+
+
+  .btn-grey-outline{
+    border-color: #ddd;
+    background: transparent;
+    &:hover{
+      border-color:var(--theme-primary-color);
+      color: #fff;
+      background:var(--theme-primary-color);
+    }
+  }
+  .btn-sm{
+    padding: 8px 22px;
+  }
+
+
+.btn-sm-2{
+  padding:6px 22px;
+}

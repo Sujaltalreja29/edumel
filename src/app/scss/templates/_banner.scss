@@ -1,0 +1,248 @@
+
+/* ================
+ BAnner
+================*/
+.content-padding{
+    padding: 100px 0px;
+}
+.banner{
+    padding:80px 0px 120px;
+    position: relative;
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 92%, 0% 100%); 
+     clip-path: polygon(0 0, 100% 0%, 100% 92%, 0% 100%); 
+     background: #F4F9FF;
+
+     .banner-content{
+        h1{
+            font-size: 60px;
+            line-height: 68px;
+            letter-spacing: -1.3px;
+            margin: 15px 0px 15px;
+        }
+        p{
+            font-size: 18px;
+            line-height: 34px;
+            max-width:80%;
+            margin-bottom: 20px;
+        }
+        .subheading{
+            color:var(--theme-primary-color);
+        }
+      
+    }
+
+    .category-name{
+        margin-top: 15px;
+        a{
+            color:#333;
+            text-decoration: underline;
+            &:hover{
+                color: var(--theme-primary-color) ;
+            }
+        }
+    }
+
+}
+
+
+
+.banner-form{
+    position: relative;
+    .form-control{
+        height: 60px;
+        border-radius: 35px;
+        background: #fff;
+        border-width: 2px;
+        padding-right: 135px;
+        padding-left: 25px;
+        border: 2px solid #ddd;
+        &:focus{
+            border-color: var(--theme-primary-color);
+        }
+    }
+
+    a{
+        position: absolute;
+        right: 5px;
+        top: 4px;
+        width: auto;
+        padding: 0px 30px;
+        height: 87%;
+        text-align: center;
+        line-height: 53px;
+        background: var(--theme-primary-color);
+        color: #fff;
+        border-radius: 35px;
+        i{
+            margin-left: 7px;
+        }
+        &:hover{
+            background: var(--theme-secondary-color);
+        }
+    }
+
+
+}
+
+/*-------------------
+Banner style 2
+-------------------*/
+.banner-style-2{
+    padding:140px 0px 160px;
+    background: url("../images/banner/banner-2.jpg") no-repeat center center;
+    background-size: cover;
+     position: relative;
+    z-index: 1;
+
+    &:after{
+        position: absolute;
+        content:"";
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        background: #120F2D;
+        opacity: .6;
+        z-index: -1;
+    }
+
+
+    .banner-content{
+        h1{
+            font-size: 70px;
+            margin: 15px 0px 15px;
+            line-height: 1.2;
+            color:$light;
+            font-weight: 600;
+        }
+        p{
+            font-size: 18px;
+            line-height: 34px;
+            max-width:80%;
+            color:$light;
+            margin: 0 auto 30px;
+        }
+        .subheading{
+            color:$light;
+        }
+
+        .cd-headline.clip span{
+            padding: 0px;
+        }
+
+        .cd-words-wrapper b{
+            text-decoration: underline;
+            font-weight: 700;
+        }
+      
+    }
+
+    .btn-white{
+        color:#000;
+
+        &:hover{
+            color: #fff;
+        }
+    }
+
+}
+
+
+
+
+
+
+/*--------------------------
+Banner-3
+----------------------------*/
+
+.banner-padding{
+    padding: 120px 0px;
+}
+
+
+.banner-style-3{
+    position: relative;
+    background: url("../images/banner/banner-3.jpg") no-repeat center center;
+    background-size: cover;
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 92%, 0% 100%); 
+     clip-path: polygon(0 0, 100% 0%, 100% 92%, 0% 100%); 
+     position: relative;
+    z-index: 1;
+
+    &:after{
+        position: absolute;
+        content:"";
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        background: #120F2D;
+        opacity: .7;
+        z-index: -1;
+    }
+
+    .banner-content{
+        h1{
+            font-size:52px;
+            line-height: 62px;
+            color: #fff;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        p{
+            max-width: 70%;
+            margin: 0px auto 30px;
+            text-align: center;
+            color: #fff;
+        }
+
+      
+
+    }
+}
+
+
+.banner-style-4{
+    position: relative;
+    z-index: 1;
+    background: #2F2D51;
+    padding-bottom: 220px;
+
+    &:after{
+        position: absolute;
+        content:"";
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        background: url("../images/banner/shape_bg.png") no-repeat center center;
+        background-size: cover;
+        opacity: .1;
+        z-index: -1;
+    }
+
+    .banner-content{
+
+        .subheading{
+            color: #fff;
+        }
+        h1{
+            font-size:48px;
+            line-height: 62px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+        p{
+            font-size: 18px;
+            line-height: 30px;
+            color: #fff;
+            opacity: .7;
+        }
+
+    }
+}

@@ -1,0 +1,39 @@
+@@include('header.htm')
+
+@@include('blocks/menu-topbar.htm')
+@@include('blocks/page-banner.htm',{
+    "page-name": "Our Blog",
+    "active" : "blog"
+})
+
+<div class="page-wrapper">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 col-xl-8">
+        		@@include('blocks/blog-posts.htm')
+        		
+        		<nav class="post-navigation">
+				  <ul>
+				    <li class="page-num active" aria-current="page">
+				      <span class="page-url">
+				        1
+				        <span class="sr-only">(current)</span>
+				      </span>
+				    </li>
+				    <li class="page-num"><a class="page-url" href="#">2</a></li>
+				    <li class="page-num"><a class="page-url" href="#">3</a></li>
+				  </ul>
+				</nav>
+      		</div>
+      		<div class="col-lg-4 col-xl-4">
+				@@include('blocks/post-sidebar.htm')
+      		</div>
+		</div>
+	</div>
+</div>
+
+
+
+@@include('blocks/footer-2.htm')
+
+@@include('footer.htm')

@@ -1,0 +1,38 @@
+@@include('header.htm')
+
+@@include('blocks/menu-topbar.htm')
+@@include('blocks/page-banner.htm',{
+    "page-name": "Blog Grid",
+    "active" : "blog"
+})
+
+<div class="page-wrapper">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 col-xl-8">
+				<div class="row">
+					@@include('blocks/blog-grid-3.htm')
+				</div>
+        		
+        		<nav class="blog-page-navigation">
+					<ul class="pagination">
+						<li class="pagination-arrow"><a href="#"><i class="fa fa-angle-double-left"></i></a></li>
+						<li><a href="#">1</a></li>
+						<li><a class="active" href="#">2</a></li>
+						<li><a href="#">3</a></li>
+						<li class="pagination-arrow"><a href="#"><i class="fa fa-angle-double-right"></i></a></li>
+					</ul>
+				</nav>
+      		</div>
+      		<div class="col-lg-4 col-xl-4">
+				@@include('blocks/post-sidebar.htm')
+      		</div>
+		</div>
+	</div>
+</div>
+
+
+
+@@include('blocks/footer-2.htm')
+
+@@include('footer.htm')

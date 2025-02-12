@@ -1,0 +1,75 @@
+
+<section class="tutori-course-single tutori-course-layout-1 section-padding-btm">
+    <div class="course-single-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7 col-xl-7">
+                    <div class="course-single-header">
+                     <span class="subheading">Backend,Development</span>
+                     <h3 class="single-course-title">Information About UI/UX Design Degree</h3> 
+                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                         Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis.</p>  
+                         
+                         <div class="d-flex align-items-center ">
+                            <div class="single-top-meta">
+                                <i class="far fa-user"></i><span> Tutori</span>
+                            </div>
+                             <div class="single-top-meta">
+                                 <i class="fa fa-user"></i><span> 3450 Students Enrolled</span>
+                             </div>
+                             <div class="single-top-meta">
+                                 <div class="rating">
+                                     <a href="#"><i class="fa fa-star"></i></a>
+                                     <a href="#"><i class="fa fa-star"></i></a>
+                                     <a href="#"><i class="fa fa-star"></i></a>
+                                     <a href="#"><i class="fa fa-star"></i></a>
+                                     <a href="#"><i class="fa fa-star"></i></a>
+                                    <span>5.00 (500 ratings)</span>
+                                 </div>
+                             </div>
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
+
+
+    <div class="tutori-course-content ">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-xl-8">               
+                    <nav class="course-single-tabs learn-press-nav-tabs">
+                        <div class="nav nav-tabs course-nav" id="nav-tab" role="tablist">
+                        <a class="nav-item nav-link active" id="nav-home-tab" data-bs-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Overview</a>
+                        <a class="nav-item nav-link" id="nav-topics-tab" data-bs-toggle="tab" href="#nav-topics" role="tab" aria-controls="nav-profile" aria-selected="false">Curriculam</a>
+                        <a class="nav-item nav-link" id="nav-instructor-tab" data-bs-toggle="tab" href="#nav-instructor" role="tab" aria-controls="nav-contact" aria-selected="false">Instructor</a>
+                        <a class="nav-item nav-link" id="nav-feedback-tab" data-bs-toggle="tab" href="#nav-feedback" role="tab" aria-controls="nav-contact" aria-selected="false">Reviews</a>
+                        </div>
+                    </nav>
+
+
+                    <div class="tab-content tutori-course-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                            @@include('blocks/course-tab-overview.htm')
+                        </div>
+
+                        <div class="tab-pane fade" id="nav-topics" role="tabpanel" aria-labelledby="nav-topics-tab">
+                            @@include('blocks/course-tab-topics.htm')
+                        </div>
+                        <div class="tab-pane fade" id="nav-instructor" role="tabpanel" aria-labelledby="nav-instructor-tab">
+                            @@include('blocks/course-tab-author.htm')
+                        </div>
+                        <div class="tab-pane fade" id="nav-feedback" role="tabpanel" aria-labelledby="nav-feedback-tab">
+                            @@include('blocks/course-tab-review.htm')
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-xl-4">
+                    @@include('blocks/course-sidebar-1.htm')
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,153 @@
+/*==================
+Author       : Dreambuzz
+Template Name: Tutori- Education Html Template by dreambuzzs
+Author URI : https://themeturn.com/
+Description: education,tutori,instructor,lms,online,instructor,dreambuzz,bootstrap,kindergarten,tutor,e learning
+Version      : 1.0
+================================*/
+
+/*------------------------------------------------------------------
+[Table of contents]
+
+1. Common
+2. Typography
+3. Navigation / #navbar
+4. Banner
+5. About
+6. Service
+7. Testimonials
+8. Blog
+9. Contact
+10. Footer / #footer
+-------------------------------------------------------------------*/
+
+
+// Fonts 
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;600;700&display=swap');
+
+
+:root {
+	--theme-heading-font: 'Gilroy', sans-serif;
+    --theme-secondary-font:'Jost', sans-serif;
+	
+	--theme-primary-color: #F14D5D;
+	--theme-secondary-color: #015ABD;
+	--theme-heading-color: #14133b;
+
+	--theme-text-color: #77838F;
+	--theme-white-color: #fff;
+	--theme-border-color: #ddd;
+}
+
+body ,html{
+    width: 100%;
+    max-width: 100%;
+}
+
+html {
+    font-family: sans-serif;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -ms-overflow-style: scrollbar;
+    -webkit-tap-highlight-color: rgba(238, 122, 122, 0);
+    overflow-x: hidden;
+}
+
+body {
+    font-family:var(--theme-secondary-font);
+    font-size: 16px;
+    line-height:30px;
+    margin: 0;
+    text-align: left;
+    background-color: #fff;
+    font-weight: 400;
+    color:var(--theme-text-color);
+}
+
+p{
+    color:var(--theme-text-color);
+    font-family:var(--theme-secondary-font);
+    line-height:30px;
+    font-size: 16px;
+}
+
+/*--------------------
+ TYPOGRAPHY
+-----------------*/
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family:var(--theme-heading-font); 
+    font-weight:700;
+    line-height: 1.2;
+    margin-bottom: .5rem;
+    color: var(--theme-heading-color);
+    margin-bottom: 0px;
+}
+
+.h1,
+h1 {
+    font-size: 46px;
+}
+
+.h2,
+h2 {
+    font-size: 32px;
+}
+
+.h3,
+h3 {
+    font-size: 28px;
+}
+
+.h4,
+h4 {
+    font-size: 22px;
+}
+
+.h5,
+h5 {
+    font-size: 18px;
+}
+
+.h6,
+h6 {
+    font-size: 16px;
+}
+
+
+.text-sm{
+    font-size: 14px;
+}
+
+.h1 a,
+.h2 a,
+.h3 a,
+.h4 a,
+.h5 a,
+.h6 a,
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a{
+    color: inherit;
+
+    &:hover{
+        color: var(--theme-primary-color);
+    }
+}
+
