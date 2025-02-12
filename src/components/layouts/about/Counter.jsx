@@ -37,7 +37,7 @@ class Counter extends Component {
     render() {
         return (
             <section className="counter-section4">
-                <div className="container">
+                <div className="container py-5">
                     <div className="row justify-content-center" >
                         <div className="col-xl-12 counter-inner">
                             <div className="row">

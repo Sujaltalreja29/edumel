@@ -19,7 +19,7 @@ const Nav = () => {
       label: "About",
       link: "/about",
       submenu: [
-        { label: "About Us", link: "/course-1" },
+        { label: "About Us", link: "/about" },
         { label: "Affiliation", link: "/course-2" },
         { label: "Infrastructure", link: "/course-3" },
         { label: "Admission", link: "/course-4" },

@@ -14,9 +14,9 @@ const AboutMain = () => {
                         currentUrl="About"
                         />
                     <Features />
-                    <Team />
+                    {/* <Team /> */}
                     <Counter />
-                    <AboutComp />
+                    {/* <AboutComp /> */}
                     <Review />
             </Layout>
         </div>
