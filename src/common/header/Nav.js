@@ -14,7 +14,7 @@ const Nav = () => {
   }, []);
 
   const [menuItems, setMenuItems] = useState([
-    { label: "Home", link: "/home-2" },
+    { label: "Home", link: "/" },
     {
       label: "About",
       link: "/about",
