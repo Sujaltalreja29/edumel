@@ -20,7 +20,7 @@ import Sports from './components/pages/sports';
 import CBSE from './components/pages/cbse';
 import CourseDetails from './components/pages/CourseDetails';
 import CourseDetailsTwo from './components/pages/CourseDetailsTwo';
-
+import Gallery from './components/pages/Gallery';
 import InstructorOne from './components/pages/InstructorPage';
 
 
@@ -53,7 +53,7 @@ function App() {
               <Route exact path={`${process.env.PUBLIC_URL + '/course-3'}`} element={<CourseThree/>}/>
               <Route exact path={`${process.env.PUBLIC_URL + '/course-4'}`} element={<CourseFour/>}/>
               <Route exact path={`${process.env.PUBLIC_URL + '/course-list'}`} element={<CourseList/>}/>
-              
+              <Route exact path={`${process.env.PUBLIC_URL + '/gallery'}`} element={<Gallery/>}/>
               <Route exact path={`${process.env.PUBLIC_URL + '/course-details/:id'}`} element={<CourseDetails/>}/>
 
               <Route exact path={`${process.env.PUBLIC_URL + '/course-details-two/:id'}`} element={<CourseDetailsTwo/>}/>

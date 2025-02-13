@@ -63,7 +63,7 @@ const Nav = () => {
         { label: "CBSE Activities", link: "/cbse" },
       ],
     },
-    { label: "Gallery", link: "/contact" },
+    { label: "Gallery", link: "/gallery" },
     { label: "Notice", link: "/contact" },
     { label: "Contact Us", link: "/contact" },
   ]);
