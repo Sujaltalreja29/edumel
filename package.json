@@ -11,6 +11,7 @@
     "isotope-layout": "^3.0.6",
     "lightbox.js-react": "^1.4.6",
     "lightbox2": "^2.11.4",
+    "lucide-react": "^0.475.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.8.0",
     "react-countup": "^6.4.2",

@@ -8,7 +8,7 @@ class About extends Component {
             <section className="be-instructor section-padding-btm">
                 <div>
                     <div className="p-5 m-5 row align-items-center justify-between">
-                        <div className=" col-xl-5 col-lg-5 mb-5 mb-lg-0 me-5">
+                        <div className=" col-xl-5 col-lg-5 mb-5 mb-lg-0 me-5" style={{marginLeft: "80px"}}>
                             <img src={`https://cathedral-school.com/wp-content/uploads/2016/05/P-1b.jpg`} alt="" className="img-fluid" />
                         </div>
 

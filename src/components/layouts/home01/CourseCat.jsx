@@ -58,7 +58,7 @@ class CourseCat01 extends Component {
                         {
                              this.state.category.map((data,i)=> (
                                  <div className="col-xl col-lg-4 col-sm-6" key={data.id}>
-                                    <div className={`single-course-category style-3 ${data.extraClassName}`}> 
+                                    <div className={`single-course-category style-3 ${data.extraClassName}`} style={{height : "248px"}}> 
                                         <div className="course-cat-icon">
                                             <img src={data.img} alt="" className="img-fluid"/>
                                         </div>

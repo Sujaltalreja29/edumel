@@ -25,7 +25,7 @@ Version      : 1.0
 :root {
   --theme-heading-font: "Gilroy", sans-serif;
   --theme-secondary-font:"Jost", sans-serif;
-  --theme-primary-color: #F14D5D;
+  --theme-primary-color: #1637c7;
   --theme-secondary-color: #015ABD;
   --theme-heading-color: #14133b;
   --theme-text-color: #77838F;
@@ -153,7 +153,7 @@ h6 a:hover {
 }
 
 a {
-  color: var(--theme-primary-color);
+  color: darkblue;
   outline: none;
   text-decoration: none;
   transition: all 0.3s ease-in-out;
@@ -162,6 +162,10 @@ a:hover {
   color: var(--theme-secondary-color);
   outline: none;
   text-decoration: none;
+}
+
+#noticetitle{
+  color: #007aff;
 }
 
 a:focus {
@@ -2512,7 +2516,8 @@ portflio filter
   color: var(--theme-secondary-color);
 }
 .course-grid .course-thumb img {
-  width: 100%;
+  width: 268.5cm;
+  height: 205.32cm;
 }
 
 .course-meta {

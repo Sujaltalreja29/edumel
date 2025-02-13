@@ -30,7 +30,7 @@ class NewsAndAchievements extends Component {
                     date: 'Feb 5, 2025',
                     viewCount: '98',
                     img: 'https://th.bing.com/th/id/OIP._ddbb-ur5OiNUHO9G6UPFgHaFP?w=236&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7',
-                    title: 'Annual Cultural Fest "Kalakriti 2025" Announced',
+                    title: 'Annual Cultural Fest Announced',
                     description: 'Three-day cultural extravaganza featuring dance, music, and art exhibitions'
                 },
                 {
@@ -65,7 +65,7 @@ class NewsAndAchievements extends Component {
                                 <div className="course-grid tooltip-style bg-white hover-shadow">
                                     <div className="course-header">
                                         <div className="course-thumb">
-                                            <img src={item.img} alt={item.title} className="img-fluid" />
+                                            <img src={item.img} alt={item.title} style={{height : "205.32px"}} className="img-fluid" />
                                             <div className="course-price">{item.category}</div>
                                         </div>
                                     </div>

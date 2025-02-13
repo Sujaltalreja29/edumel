@@ -20,11 +20,11 @@ const Nav = () => {
       link: "/about",
       submenu: [
         { label: "About Us", link: "/about" },
-        { label: "Affiliation", link: "/course-2" },
+        { label: "Affiliation", link: "/affiliation" },
         { label: "Infrastructure", link: "/course-3" },
         { label: "Admission", link: "/course-4" },
         { label: "Principal's Message", link: "/course-list" },
-        { label: "Mandatory Disclosure", link: "/course-details/1" },
+        { label: "Mandatory Disclosure", link: "/man-dis" },
       ],
     },
     {
@@ -64,7 +64,7 @@ const Nav = () => {
       ],
     },
     { label: "Gallery", link: "/gallery" },
-    { label: "Notice", link: "/contact" },
+    { label: "Notice", link: "/notice" },
     { label: "Contact Us", link: "/contact" },
   ]);
   useEffect(() => {
