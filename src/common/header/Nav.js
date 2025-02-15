@@ -32,9 +32,9 @@ const Nav = () => {
       link: "#",
       submenu: [
         { label: "Staff Details", link: "/course-1" },
-        { label: "School Committee", link: "/course-2" },
-        { label: "Student Enroll", link: "/course-3" },
-        { label: "Fee and Scholarship", link: "/course-4" },
+        { label: "School Committee", link: "/committee" },
+        { label: "Student Enroll", link: "/" },
+        { label: "Fee and Scholarship", link: "/fee" },
         { label: "Teachers Training", link: "/course-list" },
         { label: "TC Sample", link: "/course-details/1" },
       ],

@@ -10,6 +10,7 @@ const HomeTwo = () => {
         <div className="home-page-2">       
             <HeaderTwo />       
             <Banner />
+            <div className="section-padding"></div>
             <About />
             <Features />
             

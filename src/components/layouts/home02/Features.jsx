@@ -34,7 +34,7 @@ class Features extends Component {
         return (
             <section className="features-intro">
                 <div className="container">
-                    <div className="feature-inner">
+                    <div className="feature-inner" style={{top : "60px"}}>
                         <div className="row">
                             {
                                 this.state.features.map((data, i) => (

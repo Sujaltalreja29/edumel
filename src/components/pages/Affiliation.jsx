@@ -1,84 +1,119 @@
-import React, { useState } from 'react';
+import React from "react";
+import { Accordion, Table } from "react-bootstrap";
 import Layout from '../../common/Layout';
-const Affiliation = () => {
-  // Sample data - this could be passed as a prop in a real application
-  const initialData = [
-    {
-      id: 1,
-      grade: 'Grade 1',
-      tuitionFee: 25000,
-      libraryFee: 2000,
-      labFee: 3000,
-      sportsFee: 1500,
-      totalFee: 31500,
-      dueDate: '2025-03-15'
+
+const affiliationData = [
+  {
+    id: 1,
+    name: "International Baccalaureate (IB)",
+    details: {
+      type: "International",
+      level: "Primary, Middle, and High School",
+      year: "Since 2005",
+      benefits: "Globally recognized curriculum, emphasis on critical thinking",
     },
-    {
-      id: 2,
-      grade: 'Grade 2',
-      tuitionFee: 27000,
-      libraryFee: 2000,
-      labFee: 3500,
-      sportsFee: 1500,
-      totalFee: 34000,
-      dueDate: '2025-03-15'
+  },
+  {
+    id: 2,
+    name: "Cambridge Assessment International Education",
+    details: {
+      type: "International",
+      level: "Primary and Secondary Education",
+      year: "Since 2010",
+      benefits: "Rigorous academic standards, prepares students for higher education",
     },
-    {
-      id: 3,
-      grade: 'Grade 3',
-      tuitionFee: 29000,
-      libraryFee: 2000,
-      labFee: 4000,
-      sportsFee: 1500,
-      totalFee: 36500,
-      dueDate: '2025-03-15'
-    }
-  ];
+  },
+  {
+    id: 3,
+    name: "Council for the Indian School Certificate Examinations (CISCE)",
+    details: {
+      type: "National",
+      level: "Primary and Secondary Education",
+      year: "Since 1998",
+      benefits: "Comprehensive curriculum, focus on holistic development",
+    },
+  },
+];
 
-  const [searchTerm, setSearchTerm] = useState('');
-  const [data] = useState(initialData);
-
-  const filteredData = data.filter(item =>
-    item.grade.toLowerCase().includes(searchTerm.toLowerCase())
-  );
-
+const SchoolAffiliation = () => {
   return (
     <Layout>
-    <div className="max-w-6xl mx-auto p-4">
-      <div className="mb-6">
-        <h2 className="text-xl font-semibold mb-4">School Fees Structure 2025</h2>
+      <div className="container my-5">
+        <h2 className="text-center mb-4">School Affiliations</h2>
+        <Accordion>
+          {affiliationData.map((affiliation) => (
+            <Accordion.Item eventKey={affiliation.id.toString()} key={affiliation.id}>
+              <Accordion.Header className="custom-header">
+                {affiliation.name}
+              </Accordion.Header>
+              <Accordion.Body>
+                <Table striped bordered hover>
+                  <tbody>
+                    <tr>
+                      <th>Type</th>
+                      <td>{affiliation.details.type}</td>
+                    </tr>
+                    <tr>
+                      <th>Level</th>
+                      <td>{affiliation.details.level}</td>
+                    </tr>
+                    <tr>
+                      <th>Affiliation Year</th>
+                      <td>{affiliation.details.year}</td>
+                    </tr>
+                    <tr>
+                      <th>Benefits</th>
+                      <td>{affiliation.details.benefits}</td>
+                    </tr>
+                  </tbody>
+                </Table>
+              </Accordion.Body>
+            </Accordion.Item>
+          ))}
+        </Accordion>
+
+        <style>
+          {`
+            .accordion-button {
+              color: #0d6efd;
+              background-color: #fff;
+              font-weight: 500;
+            }
+
+            .accordion-button:not(.collapsed) {
+              color: #0d6efd;
+              background-color: #f8f9fa;
+            }
+
+            .accordion-button:hover {
+              color: #0d6efd !important;
+              background-color: #f8f9fa;
+            }
+
+            .accordion-button:focus {
+              box-shadow: none;
+              border-color: rgba(0,0,0,.125);
+            }
+
+            .table {
+              margin-bottom: 0;
+            }
+
+            .table th {
+              width: 150px;
+              background-color: #f8f9fa;
+            }
+
+            @media (max-width: 768px) {
+              .table th {
+                width: 120px;
+              }
+            }
+          `}
+        </style>
       </div>
-      <div className="overflow-x-auto">
-        <table className="w-full border-collapse bg-white">
-          <thead>
-            <tr className="bg-gray-50 text-black">
-              <th className="border p-3 text-left">Grade</th>
-              <th className="border p-3 text-right">Tuition Fee</th>
-              <th className="border p-3 text-right">Library Fee</th>
-              <th className="border p-3 text-right">Lab Fee</th>
-              <th className="border p-3 text-right">Sports Fee</th>
-              <th className="border p-3 text-right">Total Fee</th>
-              <th className="border p-3 text-center">Due Date</th>
-            </tr>
-          </thead>
-          <tbody>
-            {filteredData.map((item) => (
-              <tr key={item.id} className="hover:bg-gray-50 text-black">
-                <td className="border p-3">{item.grade}</td>
-                <td className="border p-3 text-right">₹{item.tuitionFee.toLocaleString()}</td>
-                <td className="border p-3 text-right">₹{item.libraryFee.toLocaleString()}</td>
-                <td className="border p-3 text-right">₹{item.labFee.toLocaleString()}</td>
-                <td className="border p-3 text-right">₹{item.sportsFee.toLocaleString()}</td>
-                <td className="border p-3 text-right font-medium">₹{item.totalFee.toLocaleString()}</td>
-                <td className="border p-3 text-center">{new Date(item.dueDate).toLocaleDateString()}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-    </div>
     </Layout>
   );
 };
 
-export default Affiliation;
+export default SchoolAffiliation;

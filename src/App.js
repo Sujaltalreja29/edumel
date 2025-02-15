@@ -25,7 +25,10 @@ import NoticePage from './components/pages/Notice';
 import InstructorOne from './components/pages/InstructorPage';
 import Xyz from './components/pages/xyz'
 import Affiliation from './components/pages/Affiliation';
-import MandatoryDisclosure from './components/pages/MandatoryDisclosure';
+import FeesAndScholarship from './components/pages/Fee';
+import MandatoryDisclosure from './components/pages/Mandatory';
+import StudentCommittee from './components/pages/Committee';
+import StudentEnrollment from './components/pages/Enrollment';
 import Login from './components/pages/Login';
 import Register from './components/pages/Register';
 
@@ -58,7 +61,10 @@ function App() {
               <Route exact path={`${process.env.PUBLIC_URL + '/gallery'}`} element={<Gallery/>}/>
               <Route exact path={`${process.env.PUBLIC_URL + '/notice'}`} element={<NoticePage/>}/>
               <Route exact path={`${process.env.PUBLIC_URL + '/affiliation'}`} element={<Affiliation/>}/>
+              <Route exact path={`${process.env.PUBLIC_URL + '/fee'}`} element={<FeesAndScholarship/>}/>
               <Route exact path={`${process.env.PUBLIC_URL + '/man-dis'}`} element={<MandatoryDisclosure/>}/>
+              <Route exact path={`${process.env.PUBLIC_URL + '/committee'}`} element={<StudentCommittee/>}/>
+              <Route exact path={`${process.env.PUBLIC_URL + '/enrollment'}`} element={<StudentEnrollment/>}/>
               <Route exact path={`${process.env.PUBLIC_URL + '/course-details/:id'}`} element={<CourseDetails/>}/>
 
               <Route exact path={`${process.env.PUBLIC_URL + '/course-details-two/:id'}`} element={<CourseDetailsTwo/>}/>
