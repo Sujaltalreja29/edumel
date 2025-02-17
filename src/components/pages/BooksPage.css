@@ -1,0 +1,267 @@
+/* BooksPage.css */
+.books-page {
+    background-color: #f5f5f5;
+  }
+  
+  .page-wrapper {
+    padding: 3rem 0;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .books-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+  }
+  
+  /* Book Card Styles */
+  .book-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .book-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .category-wrap {
+    margin-bottom: 1rem;
+  }
+  
+  .book-category {
+    background-color: #3b82f6;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+  }
+  
+  .book-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  
+  .book-title a {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .book-meta {
+    color: #666;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .book-meta a {
+    color: #3b82f6;
+    text-decoration: none;
+  }
+  
+  .book-description {
+    color: #666;
+    line-height: 1.5;
+  }
+  
+  .book-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .book-price {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #3b82f6;
+  }
+  
+  .add-to-cart-btn {
+    background-color: #3b82f6;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .add-to-cart-btn:hover {
+    background-color: #2563eb;
+  }
+  
+  /* Sidebar Widgets */
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .widget-spacing {
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Search Widget */
+  .search-widget {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .search-input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    outline: none;
+  }
+  
+  .search-input:focus {
+    border-color: #3b82f6;
+  }
+  
+  /* Latest Books Widget */
+  .latest-books-widget {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .widget-title {
+    font-size: 1.125rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .latest-book-item {
+    padding: 1rem 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .latest-book-item:last-child {
+    border-bottom: none;
+  }
+  
+  /* Categories Widget */
+  .categories-widget {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .categories-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .category-item {
+    padding: 0.75rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  .category-item:hover {
+    background-color: #f3f4f6;
+  }
+  
+  .category-item.active {
+    background-color: #3b82f6;
+    color: white;
+  }
+  
+  /* Tags Widget */
+  .tags-widget {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .tags-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .tag-item {
+    background-color: #f3f4f6;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .tag-item:hover {
+    background-color: #e5e7eb;
+  }
+  
+  .tag-item.active {
+    background-color: #3b82f6;
+    color: white;
+  }
+  
+  /* Pagination */
+  .pagination {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+  }
+  
+  .pagination-arrow,
+  .pagination-number {
+    padding: 0.5rem 1rem;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .pagination-number.active {
+    background-color: #3b82f6;
+    color: white;
+    border-color: #3b82f6;
+  }
+  
+  .pagination-arrow:hover,
+  .pagination-number:hover {
+    background-color: #f3f4f6;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .books-content {
+      grid-template-columns: 1fr;
+    }
+    
+    .sidebar {
+      order: -1;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .book-footer {
+      flex-direction: column;
+      gap: 1rem;
+      align-items: stretch;
+    }
+    
+    .book-price {
+      text-align: center;
+    }
+  }

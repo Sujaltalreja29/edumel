@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from "react-router-dom";
 import img from '../../../app/assets/images/banner/principal.jpg'
 class About extends Component {
 
@@ -14,7 +14,9 @@ class About extends Component {
 
                         <div className="col-xl-6 col-lg-6">
                             <div className="section-heading mt-4 mt-lg-0">
+                                <Link to='/principal'>
                                 <span className="subheading">Start Today</span>
+                                </Link>
                                 <h2 className="font-lg mb-20">Become an instructor </h2>
                                 <p className="mb-20">Do you want to be an instructor? Do you want to share your knowledge with everyone? If you have any skill then you can easily 
                                     share your knowledge online or offline  through iLive platform & make money.</p>

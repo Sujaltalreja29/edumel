@@ -1,0 +1,136 @@
+/* SchoolCurriculum.css */
+.curriculum-container {
+    width: 100%;
+    padding: 2rem 1rem;
+    background-color: #f8f9fa;
+  }
+  
+  .curriculum-content {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+  
+  .curriculum-intro {
+    color: #4a5568;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+  }
+  
+  .subjects-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  @media (min-width: 768px) {
+    .subjects-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  .subject-card {
+    background-color: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+  
+  .subject-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .subject-title {
+    color: #2d3748;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+  }
+  
+  .subject-description {
+    color: #4a5568;
+    line-height: 1.5;
+  }
+  
+  .activities-section {
+    background-color: #ebf8ff;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .activities-title {
+    color: #2b6cb0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  
+  .activities-list {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+  }
+  
+  .activity-item {
+    color: #4a5568;
+    padding: 0.5rem 0;
+    line-height: 1.5;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .subject-card {
+    animation: fadeIn 0.3s ease-out;
+  }
+  
+  /* Additional responsive styles */
+  @media (max-width: 640px) {
+    .curriculum-container {
+      padding: 1rem;
+    }
+    
+    .activities-section {
+      padding: 1.5rem;
+    }
+    
+    .subject-title {
+      font-size: 1.125rem;
+    }
+    
+    .activities-title {
+      font-size: 1.25rem;
+    }
+  }
+  
+  /* Print styles */
+  @media print {
+    .curriculum-container {
+      background-color: white;
+      padding: 0;
+    }
+    
+    .subject-card {
+      break-inside: avoid;
+      box-shadow: none;
+      border: 1px solid #000;
+    }
+    
+    .activities-section {
+      background-color: white;
+      border: 1px solid #000;
+    }
+  }

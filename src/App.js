@@ -29,12 +29,17 @@ import FeesAndScholarship from './components/pages/Fee';
 import MandatoryDisclosure from './components/pages/Mandatory';
 import StudentCommittee from './components/pages/Committee';
 import StudentEnrollment from './components/pages/Enrollment';
+import HolidayList from './components/pages/Holdiays';
 import Login from './components/pages/Login';
 import Register from './components/pages/Register';
-
+import SchoolInfrastructure from './components/pages/Schoolnfrastructure';
+import SchoolCurriculum from './components/pages/SchoolCurriculum';
 import ContactPage from './components/pages/ContactPage';
 import BlogPageOne from './components/pages/BlogPageOne';
-
+import Principal from './components/pages/Principal';
+import AdmissionForm from './components/pages/Admission';
+import CBSEResults from './components/pages/CBSEresult';
+import CVUploadPage from './components/pages/TC'
 
 function App() {
 
@@ -65,8 +70,17 @@ function App() {
               <Route exact path={`${process.env.PUBLIC_URL + '/man-dis'}`} element={<MandatoryDisclosure/>}/>
               <Route exact path={`${process.env.PUBLIC_URL + '/committee'}`} element={<StudentCommittee/>}/>
               <Route exact path={`${process.env.PUBLIC_URL + '/enrollment'}`} element={<StudentEnrollment/>}/>
+              <Route exact path={`${process.env.PUBLIC_URL + '/schoolinfra'}`} element={<SchoolInfrastructure/>}/>
+              <Route exact path={`${process.env.PUBLIC_URL + '/schoolcurriculum'}`} element={<SchoolCurriculum/>}/>
               <Route exact path={`${process.env.PUBLIC_URL + '/course-details/:id'}`} element={<CourseDetails/>}/>
-
+              <Route exact path={`${process.env.PUBLIC_URL + '/holidays'}`} element={<HolidayList/>}/>
+              <Route exact path={`${process.env.PUBLIC_URL + '/tc'}`} element={<CVUploadPage/>}/>
+              <Route exact path={`${process.env.PUBLIC_URL + '/result'}`} element={<CBSEResults/>}/>
+              <Route
+            path="/principal"
+            element={<Principal/>}
+          />
+          <Route exact path={`${process.env.PUBLIC_URL + '/admission'}`} element={<AdmissionForm/>}/>
               <Route exact path={`${process.env.PUBLIC_URL + '/course-details-two/:id'}`} element={<CourseDetailsTwo/>}/>
 
               <Route exact path={`${process.env.PUBLIC_URL + '/instructors'}`} element={<InstructorOne/>}/>

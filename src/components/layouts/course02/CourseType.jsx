@@ -37,7 +37,7 @@ const CourseType = ({ data }) => {
                     </div>
                 </div> */}
                 
-                <h3 className="course-title"> <Link to={process.env.PUBLIC_URL + `/course-details/${data.id}`}>{data.title}</Link></h3>
+                <h3 className="course-title"> <Link to={process.env.PUBLIC_URL + `/course-details-two/${data.id}`}>{data.title}</Link></h3>
                 <div className="course-meta">
                     <span className="duration"><i className="far fa-user-alt"></i>{data.post}</span>
                     <p>{data.date}</p>
