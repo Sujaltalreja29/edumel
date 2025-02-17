@@ -36,7 +36,7 @@ const Nav = () => {
         { label: "Student Enroll", link: "/enrollment" },
         { label: "Fee and Scholarship", link: "/fee" },
         { label: "Teachers Training", link: "/course-list" },
-        { label: "TC Sample", link: "/course-details/1" },
+        { label: "TC Sample", link: "/tc" },
       ],
     },
     {
@@ -45,7 +45,7 @@ const Nav = () => {
       submenu: [
         { label: "School Curiculum", link: "/schoolcurriculum" },
         { label: "List of Books", link: "/blog" },
-        { label: "School at Glance", link: "/course-3" },
+        { label: "School at Glance", link: "/schoolinfra" },
         { label: "Holidays List", link: "/holidays" },
         { label: "CBSE Result", link: "/result" },
       ],
