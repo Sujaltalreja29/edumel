@@ -18,7 +18,7 @@ const CourseGrid = ({ page }) => {
 
     const curr_data = schoolData.filter((item) => item.category === page);
     const allCourseItems = curr_data[0].data;
-
+    const category = page;
     const sortOptions = [
         { value: 'default', label: 'Default Order' },
         { value: 'a-z', label: 'A to Z' },
@@ -110,7 +110,7 @@ const CourseGrid = ({ page }) => {
                     {filteredAndSortedItems.length > 0 ? (
                         filteredAndSortedItems.map((item) => (
                             <div className="col-xl-4 col-lg-6 col-md-6" key={item.id}>
-                                <CourseType data={item} />
+                                <CourseType data={item} category={category}/>
                             </div>
                         ))
                     ) : (

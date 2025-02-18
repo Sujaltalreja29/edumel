@@ -63,12 +63,22 @@ const CurriculumContent = () => {
 
 
 const CourseDetails = () => {
-
-    const { id } = useParams();
+        const schoolData = [
+            { category: "Curricular", data: activityData },
+            { category: "School", data: schoolActivities },
+            { category: "Achievements", data: achievements },
+            { category: "Olympiad", data: olympiad },
+            { category: "Community", data: communityService },
+            { category: "Sports", data: sports },
+            { category: "CBSE", data: cbseActivities },
+        ];
+    const { id , category } = useParams();
     const courseId = parseInt(id, 10);
-    const data = activityData.filter(course => course.id === courseId);
+    const curr_data = schoolData.filter((item) => item.category === category);
+    const page_data = curr_data[0].data;
+    const data = page_data.filter(course => course.id === courseId);
     const courseItem = data[0];
-    console.log(courseItem)
+    console.log(curr_data[0].data)
     // const instructor = InstructorData[indexOfInstructor];
 
     // const instructorThumb = InstructorData[indexOfInstructor].image;

@@ -3,17 +3,17 @@ import { Link } from 'react-router-dom';
 import InstructorData from '../../../data/instructor/InstructorData.json';
 import { slugify } from '../../../utils/index';
 
-const CourseType = ({ data }) => {
+const CourseType = ({ data , category }) => {
     // const indexOfInstructor = InstructorData.findIndex( function( instructor ) {
     //     return slugify( instructor.name ) === slugify( data.instructor );
     // } );
     // const instructorThumb = InstructorData[indexOfInstructor].image;
-    console.log(data)
+    console.log(category)
     return (
         <div className={`course-grid course-style-4 bg-white mb-80`}>
             <div class="course-header">
                 <div class="course-thumb">
-                    <img src={data.img} alt="Course Thumb" class="img-fluid"/>
+                    <img src={data.img} style={{width : "311.73px" , height : "203.65px"}} alt="Course Thumb" class="img-fluid"/>
                 </div>
             </div>
 
@@ -37,7 +37,7 @@ const CourseType = ({ data }) => {
                     </div>
                 </div> */}
                 
-                <h3 className="course-title"> <Link to={process.env.PUBLIC_URL + `/course-details-two/${data.id}`}>{data.title}</Link></h3>
+                <h3 className="course-title"> <Link to={process.env.PUBLIC_URL + `/course-details-two/${category}/${data.id}`}>{data.title}</Link></h3>
                 <div className="course-meta">
                     <span className="duration"><i className="far fa-user-alt"></i>{data.post}</span>
                     <p>{data.date}</p>
