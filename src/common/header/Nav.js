@@ -35,7 +35,7 @@ const Nav = () => {
         { label: "School Committee", link: "/committee" },
         { label: "Student Enroll", link: "/enrollment" },
         { label: "Fee and Scholarship", link: "/fee" },
-        { label: "Teachers Training", link: "/course-list" },
+        { label: "Teachers Training", link: "/training" },
         { label: "TC Sample", link: "/tc" },
       ],
     },
