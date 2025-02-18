@@ -40,6 +40,7 @@ import Principal from './components/pages/Principal';
 import AdmissionForm from './components/pages/Admission';
 import CBSEResults from './components/pages/CBSEresult';
 import CVUploadPage from './components/pages/TC'
+import Training from './components/pages/Training'
 
 function App() {
 
@@ -84,6 +85,7 @@ function App() {
               <Route exact path={`${process.env.PUBLIC_URL + '/course-details-two/:id'}`} element={<CourseDetailsTwo/>}/>
 
               <Route exact path={`${process.env.PUBLIC_URL + '/instructors'}`} element={<InstructorOne/>}/>
+              <Route exact path={`${process.env.PUBLIC_URL + '/training'}`} element={<Training/>}/>
               <Route exact path={`${process.env.PUBLIC_URL + '/login'}`} element={<Login/>}/>
               <Route exact path={`${process.env.PUBLIC_URL + '/register'}`} element={<Register/>}/>
 
