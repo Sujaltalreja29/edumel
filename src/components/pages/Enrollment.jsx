@@ -1,6 +1,7 @@
 import React from 'react';
 import { Accordion, Table } from 'react-bootstrap';
 import Layout from '../../common/Layout';
+import { PageBanner } from '../layouts/course02/index';
 const StudentEnrollment = () => {
   const enrollmentData = [
     {
@@ -55,6 +56,12 @@ const StudentEnrollment = () => {
 
   return (
     <Layout>
+          <PageBanner
+                        title="Student Enrollment"
+                        rootUrl="/"
+                        parentUrl="Home"
+                        currentUrl="Enrollment"
+                        />
     <div className="container my-5">
       <h2 className="text-center mb-4">Student Enrollment</h2>
       <p className="text-muted mb-4">Admission Information and Current Status</p>

@@ -1,6 +1,7 @@
 import React from "react";
 import { Table } from "react-bootstrap";
 import Layout from "../../common/Layout"
+import { PageBanner } from "../layouts/about";
 // Sample data for school notices
 const noticeData = [
   {
@@ -43,6 +44,12 @@ const SchoolNoticePage = () => {
 
   return (
     <Layout>
+          <PageBanner
+                        title="School Notice"
+                        rootUrl="/"
+                        parentUrl="Home"
+                        currentUrl="Notice"
+                        />
     <div className="container my-5">
       <h1 className="text-center mb-4">School Notices</h1>
       <div className="table-responsive">

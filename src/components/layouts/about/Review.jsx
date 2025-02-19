@@ -12,35 +12,35 @@ class Review extends Component {
                     img: 'assets/images/clients/testimonial-avata-01.jpg',
                     text: 'They are creative enough.Very much creative and powerful enough.Lorem ipsum dolor sit amet consectetur adipisicing elit.',
                     name: 'John Doe',
-                    desigantion: 'Marketing Specialist',
+                    desigantion: 'Batch 2023',
                 },
                 {
                     id:2,
                     img: 'assets/images/clients/testimonial-avata-02.jpg',
                     text: 'They are creative enough.Very much creative and powerful enough.Lorem ipsum dolor sit amet consectetur adipisicing elit.',
                     name: 'Cory Zamora',
-                    desigantion: 'Developer',
+                    desigantion: 'Batch 2024',
                 },
                 {
                     id: 3,
                     img: 'assets/images/clients/testimonial-avata-03.jpg',
                     text: 'They are creative enough.Very much creative and powerful enough.Lorem ipsum dolor sit amet consectetur adipisicing elit.',
                     name: 'Jackie Sanders',
-                    desigantion: 'Marketing Manager',
+                    desigantion: 'Batch 2022',
                 },
                 {
                     id:4,
                     img: 'assets/images/clients/testimonial-avata-04.jpg',
                     text: 'They are creative enough.Very much creative and powerful enough.Lorem ipsum dolor sit amet consectetur adipisicing elit.',
                     name: 'Nikolas Brooten',
-                    desigantion: 'Developer',
+                    desigantion: 'Batch 2023',
                 },
                 {
                     id:5,
                     img: 'assets/images/clients/testimonial-avata-03.jpg',
                     text: 'They are creative enough.Very much creative and powerful enough.Lorem ipsum dolor sit amet consectetur adipisicing elit.',
                     name: 'Terry Ambady',
-                    desigantion: 'Developer',
+                    desigantion: 'Batch 2021',
                 },
             ]
         }
@@ -108,9 +108,9 @@ class Review extends Component {
                                                     </div>
 
                                                     <div class="client-info d-flex align-items-center">
-                                                        <div class="client-img">
+                                                        {/* <div class="client-img">
                                                             <img src={data.img} alt="" class="img-fluid"/>
-                                                        </div>
+                                                        </div> */}
                                                         <div class="testimonial-author">
                                                             <h4>{data.name}</h4>
                                                             <span class="meta">{data.desigantion}</span>

@@ -39,14 +39,14 @@ class About extends Component {
                     <div className="row align-items-center justify-content-between">
                         <div className="col-xl-5 col-lg-6">
                             <div className="about-img">
-                                <img src="assets/images/banner/img_9.png" alt="" className="img-fluid"/>
+                                <img src={`https://th.bing.com/th/id/OIP.RSbKVQOA3pe-uebbWYAP4gHaEK?w=333&h=187&c=7&r=0&o=5&dpr=1.3&pid=1.7`} alt="" className="img-fluid" style={{height : "535px" , width : "470px"}}/>
                             </div>
                         </div>
                         <div className="col-xl-6 col-lg-6">
                             <div className="about-content mt-5 mt-lg-0">
                                 <div className="heading mb-50">
                                     <span className="subheading">10 years Glory of success</span>
-                                    <h2 className="font-lg">Some reasons why Start Your Online Learning with Us</h2>
+                                    <h2 className="font-lg">Some reasons why Start Your Learning with Us</h2>
                                 </div>
 
                                 <div className="about-features">

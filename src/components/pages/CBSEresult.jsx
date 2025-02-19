@@ -1,5 +1,6 @@
 import React from 'react';
 import Layout from "../../common/Layout";
+import { PageBanner } from '../layouts/about';
 
 const CBSEResults = () => {
   const resultsData = [
@@ -36,6 +37,12 @@ const CBSEResults = () => {
 
   return (
     <Layout>
+          <PageBanner
+                        title="CBSE Result"
+                        rootUrl="/"
+                        parentUrl="Home"
+                        currentUrl="Result"
+                        />
       <div className="container py-4">
         <p className="text-center text-gray-700 mb-4">
           We take pride in our students' consistent academic excellence in CBSE Board Examinations.

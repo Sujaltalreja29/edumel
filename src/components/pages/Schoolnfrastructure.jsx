@@ -1,9 +1,16 @@
 
 import Layout from '../../common/Layout';
+import { PageBanner } from '../layouts/blog/index';
 const SchoolInfrastructure = () => {
     return (
         <>
             <Layout>
+            <PageBanner
+                        title="School Infrastructure"
+                        rootUrl="/"
+                        parentUrl="Home"
+                        currentUrl="Campus"
+                        />
                 <div className="container my-5">
                 <div className=" max-w-4xl mx-auto p-6 py-50">
                     <h1 className="text-3xl font-bold mb-4 text-center">School Infrastructure</h1>

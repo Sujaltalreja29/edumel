@@ -1,6 +1,7 @@
 import React from "react";
 import { Accordion, Table } from "react-bootstrap";
 import Layout from '../../common/Layout';
+import { PageBanner } from "../layouts/about";
 
 const affiliationData = [
   {
@@ -38,6 +39,12 @@ const affiliationData = [
 const SchoolAffiliation = () => {
   return (
     <Layout>
+                          <PageBanner
+                        title="Affiliation"
+                        rootUrl="/"
+                        parentUrl="Home"
+                        currentUrl="Affiliation"
+                        />
       <div className="container my-5">
         <h2 className="text-center mb-4">School Affiliations</h2>
         <Accordion>

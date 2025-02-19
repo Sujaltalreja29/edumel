@@ -1,6 +1,7 @@
 import React from 'react';
 import { Accordion, Table } from 'react-bootstrap';
 import Layout from '../../common/Layout';
+import { PageBanner } from '../layouts/about';
 
 const feesData = [
   {
@@ -80,8 +81,13 @@ const scholarshipData = [
 const FeesAndScholarship = () => {
   return (
     <Layout>
+          <PageBanner
+                        title="Fees Structure and Scholarships"
+                        rootUrl="/"
+                        parentUrl="Home"
+                        currentUrl="fee structure"
+                        />
       <div className="container my-5">
-        <h2 className="text-center mb-4">Fees Structure and Scholarships</h2>
         
         {/* Fees Section */}
         <div className="mb-5">

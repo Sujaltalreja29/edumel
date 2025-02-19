@@ -4,6 +4,7 @@ import { useState } from "react"
 import { SlideshowLightbox } from "lightbox.js-react"
 import "lightbox.js-react/dist/index.css"
 import Layout from "../../common/Layout"
+import { PageBanner } from "../layouts/about"
 
 const Gallery = () => {
   const [imagesLoaded, setImagesLoaded] = useState(0)
@@ -64,6 +65,12 @@ const Gallery = () => {
 
   return (
     <Layout>
+          <PageBanner
+                        title="School Gallery"
+                        rootUrl="/"
+                        parentUrl="Home"
+                        currentUrl="Gallery"
+                        />
       <div className="school-gallery">
         <h1 className="gallery-title">School Gallery</h1>
         <p className="gallery-description">Explore the vibrant moments from our school activities.</p>

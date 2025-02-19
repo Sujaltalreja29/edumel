@@ -1,6 +1,7 @@
 import React from 'react';
 import { Accordion, Table } from 'react-bootstrap';
 import Layout from "../../common/Layout"
+import { PageBanner } from '../layouts/about';
 const MandatoryDisclosure = () => {
   const disclosureData = [
     {
@@ -43,8 +44,13 @@ const MandatoryDisclosure = () => {
 
   return (
     <Layout>
+          <PageBanner
+                        title="Mandatory Disclosure"
+                        rootUrl="/"
+                        parentUrl="Home"
+                        currentUrl="man-dis"
+                        />
     <div className="container my-5">
-      <h2 className="text-center mb-4">Mandatory Disclosure</h2>
       <p className="text-muted mb-4">Academic Year 2023-24</p>
       
       <Accordion>

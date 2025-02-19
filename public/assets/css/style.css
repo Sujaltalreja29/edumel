@@ -960,7 +960,7 @@ Menu top
 
 .header-topbar {
   background: #031F42;
-  padding: 5px 0px;
+  padding: 0px 0px;
 }
 
 .border-top-bottom {
@@ -1291,7 +1291,7 @@ Header Style 3
 }
 
 .header-style-1 .header-navbar {
-  padding: 25px 0px;
+  padding: 15px 0px;
 }
 
 .topbar-style-2 {

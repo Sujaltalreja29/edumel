@@ -1,6 +1,7 @@
 import React from 'react';
 import { Accordion, Table } from 'react-bootstrap';
 import Layout from '../../common/Layout';
+import { PageBanner } from '../layouts/about';
 const StudentCommittee = () => {
   const committeeData = [
     {
@@ -67,8 +68,13 @@ const StudentCommittee = () => {
 
   return (
     <Layout>
+          <PageBanner
+                        title="Student Committee"
+                        rootUrl="/"
+                        parentUrl="Home"
+                        currentUrl="Committee"
+                        />
     <div className="container my-5">
-      <h2 className="text-center mb-4">Student Committees</h2>
       <p className="text-muted mb-4">Active Committees for Academic Year 2023-24</p>
       
       <Accordion>
