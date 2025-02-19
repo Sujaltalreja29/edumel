@@ -1,0 +1,121 @@
+.cv-container {
+    padding: 20px;
+    max-width: 95%;
+    margin: 0 auto;
+    background-color: #fff;
+  }
+  
+  .cv-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+  }
+  
+  .cv-header h2 {
+    margin: 0;
+    color: #333;
+    font-size: 24px;
+  }
+  
+  .cv-actions {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .add-row-btn, .download-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s;
+  }
+  
+  .add-row-btn {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .download-btn {
+    background-color: #2196F3;
+    color: white;
+  }
+  
+  .add-row-btn:hover {
+    background-color: #45a049;
+  }
+  
+  .download-btn:hover {
+    background-color: #1976D2;
+  }
+  
+  .table-wrapper {
+    overflow-x: auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cv-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 1200px;
+  }
+  
+  .cv-table th {
+    background-color: #f8f9fa;
+    padding: 12px;
+    text-align: left;
+    font-weight: 600;
+    color: #333;
+    border-bottom: 2px solid #dee2e6;
+  }
+  
+  .cv-table td {
+    padding: 8px;
+    border-bottom: 1px solid #dee2e6;
+  }
+  
+  .cv-table input,
+  .cv-table select,
+  .cv-table textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .cv-table input:focus,
+  .cv-table select:focus,
+  .cv-table textarea:focus {
+    outline: none;
+    border-color: #2196F3;
+    box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.1);
+  }
+  
+  .cv-table textarea {
+    resize: vertical;
+    min-height: 60px;
+  }
+  
+  .cv-table tr:hover {
+    background-color: #f5f5f5;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .cv-header {
+      flex-direction: column;
+      gap: 10px;
+      text-align: center;
+    }
+    
+    .cv-actions {
+      width: 100%;
+      justify-content: center;
+    }
+  }

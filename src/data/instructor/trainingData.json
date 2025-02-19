@@ -4,79 +4,55 @@
         "title": "Effective Classroom Management",
         "trainer": "Dr. Rajesh Sharma",
         "date": "2025-03-10",
-        "duration": "2 Days",
-        "venue": "Auditorium Hall",
-        "image": "train.jpeg",
-        "description": "A workshop focused on managing classroom behavior, student engagement, and discipline strategies."
+        "image": "train.jpeg"
     },
     {
         "id": 2,
         "title": "Integrating Technology in Education",
         "trainer": "Anita Verma",
         "date": "2025-04-05",
-        "duration": "3 Days",
-        "venue": "Computer Lab",
-        "image": "train.jpeg",
-        "description": "Training on using smart boards, educational software, and online tools to enhance learning experiences."
+        "image": "train.jpeg"
     },
     {
         "id": 3,
         "title": "Innovative Teaching Methods",
         "trainer": "Vikram Singh",
         "date": "2025-04-20",
-        "duration": "1 Day",
-        "venue": "Seminar Room 1",
-        "image": "train.jpeg",
-        "description": "Exploring new teaching techniques such as flipped classrooms, gamification, and project-based learning."
+        "image": "train.jpeg"
     },
     {
         "id": 4,
         "title": "Student Mental Health Awareness",
         "trainer": "Pooja Iyer",
         "date": "2025-05-15",
-        "duration": "2 Days",
-        "venue": "Wellness Center",
-        "image": "train.jpeg",
-        "description": "Understanding student mental health, stress management techniques, and effective communication skills."
+        "image": "train.jpeg"
     },
     {
         "id": 5,
         "title": "Inclusive Education Strategies",
         "trainer": "Manoj Nair",
         "date": "2025-06-01",
-        "duration": "3 Days",
-        "venue": "Conference Room",
-        "image": "train.jpeg",
-        "description": "Techniques for handling diverse classrooms, special needs education, and personalized learning plans."
+        "image": "train.jpeg"
     },
     {
         "id": 6,
         "title": "Enhancing Communication Skills",
         "trainer": "Ritika Das",
         "date": "2025-06-20",
-        "duration": "1 Day",
-        "venue": "Lecture Hall",
-        "image": "train.jpeg",
-        "description": "Improving verbal and non-verbal communication skills for better classroom interactions."
+        "image": "train.jpeg"
     },
     {
         "id": 7,
         "title": "Assessment and Evaluation Techniques",
         "trainer": "Sandeep Chatterjee",
         "date": "2025-07-05",
-        "duration": "2 Days",
-        "venue": "Training Center",
-        "image": "train.jpeg",
-        "description": "Methods for formative and summative assessments, grading systems, and student progress tracking."
+        "image": "train.jpeg"
     },
     {
         "id": 8,
         "title": "Effective Parent-Teacher Communication",
         "trainer": "Meera Joshi",
         "date": "2025-07-18",
-        "duration": "1 Day",
-        "venue": "Staff Room",
-        "image": "train.jpeg",
-        "description": "Building strong relationships with parents for student success through regular meetings and feedback sessions."
+        "image": "train.jpeg"
     }
 ]

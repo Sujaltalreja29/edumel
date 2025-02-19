@@ -1,320 +1,220 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import './BookGrid.css';
 import Layout from '../../common/Layout';
-import { PageBanner } from '../layouts/blog/index';
-import './BooksPage.css';
-
-const BookData = [
+const classData = [
   {
-    id: 1,
-    title: "To Kill a Mockingbird",
-    author: "Harper Lee",
-    category: "Literature",
-    price: 29.99,
-    date: "March 15, 2024",
-    description: "A compelling story of racial injustice and loss of innocence in the American South"
+    class: 1,
+    books: [
+      { subject: "English", name: "Marigold Book 1" },
+      { subject: "Hindi", name: "Rimjhim 1" },
+      { subject: "Mathematics", name: "Math Magic 1" },
+      { subject: "EVS", name: "Looking Around 1" },
+    ],
+    totalBooks: 4,
+    image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=500&q=80"
   },
   {
-    id: 2,
-    title: "Advanced Mathematics",
-    author: "Michael Thompson",
-    category: "Mathematics",
-    price: 45.99,
-    date: "March 14, 2024",
-    description: "Comprehensive guide to advanced mathematical concepts and problem-solving"
+    class: 2,
+    books: [
+      { subject: "English", name: "Marigold Book 2" },
+      { subject: "Hindi", name: "Rimjhim 2" },
+      { subject: "Mathematics", name: "Math Magic 2" },
+      { subject: "EVS", name: "Looking Around 2" },
+    ],
+    totalBooks: 4,
+    image: "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=500&q=80"
   },
   {
-    id: 3,
-    title: "World History",
-    author: "Sarah Johnson",
-    category: "History",
-    price: 35.99,
-    date: "March 13, 2024",
-    description: "An in-depth exploration of world history from ancient civilizations to modern times"
+    class: 3,
+    books: [
+      { subject: "English", name: "Marigold Book 3" },
+      { subject: "Hindi", name: "Rimjhim 3" },
+      { subject: "Mathematics", name: "Math Magic 3" },
+      { subject: "EVS", name: "Looking Around 3" },
+      { subject: "Computer", name: "Computer Studies 3" },
+    ],
+    totalBooks: 5,
+    image: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=500&q=80"
   },
   {
-    id: 4,
-    title: "Chemistry Fundamentals",
-    author: "David Wilson",
-    category: "Science",
-    price: 42.99,
-    date: "March 12, 2024",
-    description: "Essential concepts in chemistry with practical applications and examples"
+    class: 4,
+    books: [
+      { subject: "English", name: "Marigold Book 4" },
+      { subject: "Hindi", name: "Rimjhim 4" },
+      { subject: "Mathematics", name: "Math Magic 4" },
+      { subject: "EVS", name: "Looking Around 4" },
+      { subject: "Computer", name: "Computer Studies 4" },
+    ],
+    totalBooks: 5,
+    image: "https://images.unsplash.com/photo-1516979187457-637abb4f9353?w=500&q=80"
   },
   {
-    id: 5,
-    title: "Spanish for Beginners",
-    author: "Maria Garcia",
-    category: "Languages",
-    price: 27.99,
-    date: "March 11, 2024",
-    description: "A beginner's guide to Spanish language with practical exercises"
+    class: 5,
+    books: [
+      { subject: "English", name: "Marigold Book 5" },
+      { subject: "Hindi", name: "Rimjhim 5" },
+      { subject: "Mathematics", name: "Math Magic 5" },
+      { subject: "EVS", name: "Looking Around 5" },
+      { subject: "Computer", name: "Computer Studies 5" },
+    ],
+    totalBooks: 5,
+    image: "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=500&q=80"
   },
   {
-    id: 6,
-    title: "Biology Essentials",
-    author: "Robert Brown",
-    category: "Science",
-    price: 38.99,
-    date: "March 10, 2024",
-    description: "Fundamental principles of biology with detailed illustrations and examples"
+    class: 6,
+    books: [
+      { subject: "English", name: "Honeysuckle" },
+      { subject: "Hindi", name: "Vasant 1" },
+      { subject: "Mathematics", name: "Mathematics 6" },
+      { subject: "Science", name: "Science 6" },
+      { subject: "Social Science", name: "Our Past I" },
+      { subject: "Sanskrit", name: "Ruchira" },
+      { subject: "Computer", name: "Computer Studies 6" },
+    ],
+    totalBooks: 7,
+    image: "https://images.unsplash.com/photo-1532012197267-da84d127e765?w=500&q=80"
   },
   {
-    id: 7,
-    title: "English Literature",
-    author: "Emily White",
-    category: "Literature",
-    price: 32.99,
-    date: "March 9, 2024",
-    description: "A comprehensive survey of English literature through the ages"
+    class: 7,
+    books: [
+      { subject: "English", name: "Honeycomb" },
+      { subject: "Hindi", name: "Vasant 2" },
+      { subject: "Mathematics", name: "Mathematics 7" },
+      { subject: "Science", name: "Science 7" },
+      { subject: "Social Science", name: "Our Past II" },
+      { subject: "Sanskrit", name: "Ruchira" },
+      { subject: "Computer", name: "Computer Studies 7" },
+    ],
+    totalBooks: 7,
+    image: "https://images.unsplash.com/photo-1550592704-6c76defa9985?w=500&q=80"
   },
   {
-    id: 8,
-    title: "Physics Principles",
-    author: "Alan Parker",
-    category: "Science",
-    price: 47.99,
-    date: "March 8, 2024",
-    description: "Core physics concepts explained with practical applications"
-  }
+    class: 8,
+    books: [
+      { subject: "English", name: "Honeydew" },
+      { subject: "Hindi", name: "Vasant 3" },
+      { subject: "Mathematics", name: "Mathematics 8" },
+      { subject: "Science", name: "Science 8" },
+      { subject: "Social Science", name: "Our Past III" },
+      { subject: "Sanskrit", name: "Ruchira" },
+      { subject: "Computer", name: "Computer Studies 8" },
+    ],
+    totalBooks: 7,
+    image: "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=500&q=80"
+  },
+  {
+    class: 9,
+    books: [
+      { subject: "English", name: "Beehive" },
+      { subject: "Hindi", name: "Kshitij" },
+      { subject: "Mathematics", name: "Mathematics 9" },
+      { subject: "Science", name: "Science 9" },
+      { subject: "Social Science", name: "Contemporary India" },
+      { subject: "Sanskrit", name: "Shemushi" },
+      { subject: "Computer", name: "Foundation of IT" },
+    ],
+    totalBooks: 7,
+    image: "https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=500&q=80"
+  },
+  {
+    class: 10,
+    books: [
+      { subject: "English", name: "First Flight" },
+      { subject: "Hindi", name: "Kshitij 2" },
+      { subject: "Mathematics", name: "Mathematics 10" },
+      { subject: "Science", name: "Science 10" },
+      { subject: "Social Science", name: "Contemporary India II" },
+      { subject: "Sanskrit", name: "Shemushi II" },
+      { subject: "Computer", name: "Foundation of IT" },
+    ],
+    totalBooks: 7,
+    image: "https://images.unsplash.com/photo-1456735190827-d1262f71b8a3?w=500&q=80"
+  },
+  {
+    class: 11,
+    books: [
+      { subject: "English", name: "Hornbill" },
+      { subject: "Physics", name: "Physics Part I & II" },
+      { subject: "Chemistry", name: "Chemistry Part I & II" },
+      { subject: "Mathematics", name: "Mathematics 11" },
+      { subject: "Biology", name: "Biology" },
+      { subject: "Computer Science", name: "Computer Science with Python" },
+      { subject: "Physical Education", name: "Health and Physical Education" },
+    ],
+    totalBooks: 7,
+    image: "https://images.unsplash.com/photo-1532012197267-da84d127e765?w=500&q=80"
+  },
+  {
+    class: 12,
+    books: [
+      { subject: "English", name: "Flamingo" },
+      { subject: "Physics", name: "Physics Part I & II" },
+      { subject: "Chemistry", name: "Chemistry Part I & II" },
+      { subject: "Mathematics", name: "Mathematics 12" },
+      { subject: "Biology", name: "Biology" },
+      { subject: "Computer Science", name: "Computer Science with Python" },
+      { subject: "Physical Education", name: "Health and Physical Education" },
+    ],
+    totalBooks: 7,
+    image: "https://images.unsplash.com/photo-1532012197267-da84d127e765?w=500&q=80"
+  },
 ];
 
-const BookGridItem = ({ data }) => {
+function BookGrid() {
   return (
-    <div className="book-card">
-      <div className="book-content">
-        <div className="category-wrap">
-          <a href="#" className="book-category">{data.category}</a>
+    <>
+    <Layout>
+    <div className="book-grid">
+      <div className="container">
+        <div className="header">
+          <h1>School Books</h1>
+          <p>Browse books for all classes</p>
         </div>
-        <h3 className="book-title">
-          <a href={`/books/${data.id}`}>{data.title}</a>
-        </h3>
-        <div className="book-meta">
-          <span className="author">By <a href="#">{data.author}</a></span>
-          <span className="separator">•</span>
-          <span className="date">{data.date}</span>
-        </div>
-        <p className="book-description">{data.description}</p>
-        <div className="book-footer">
-          <p className="book-price">${data.price}</p>
-          <button className="add-to-cart-btn">Add to Cart</button>
-        </div>
-      </div>
-    </div>
-  );
-};
 
-const SearchWidget = ({ onSearch }) => {
-  const [searchQuery, setSearchQuery] = useState('');
-  
-  const handleSearch = (e) => {
-    const query = e.target.value;
-    setSearchQuery(query);
-    onSearch(query);
-  };
-  
-  return (
-    <div className="search-widget">
-      <div className="search-box">
-        <input 
-          type="text" 
-          placeholder="Search books..." 
-          value={searchQuery}
-          onChange={handleSearch}
-          className="search-input"
-        />
-      </div>
-    </div>
-  );
-};
-
-const LatestBooks = ({ books, extraClass }) => {
-  const latestBooks = books.slice(0, 3);
-  
-  return (
-    <div className={`latest-books-widget ${extraClass}`}>
-      <div className="widget-inner">
-        <h5 className="widget-title">Latest Books</h5>
-        <div className="latest-books-list">
-          {latestBooks.map((book) => (
-            <div className="latest-book-item" key={book.id}>
-              <div className="book-content">
-                <h6 className="title">
-                  <a href={`/books/${book.id}`}>{book.title}</a>
-                </h6>
-                <p className="author">{book.author}</p>
-                <p className="price">${book.price}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-};
-
-const Categories = ({ categories, onCategorySelect, selectedCategory, extraClass }) => {
-  return (
-    <div className={`categories-widget ${extraClass}`}>
-      <div className="widget-inner">
-        <h5 className="widget-title">Categories</h5>
-        <div className="categories-list">
-          <div 
-            className={`category-item ${selectedCategory === '' ? 'active' : ''}`}
-            onClick={() => onCategorySelect('')}
-          >
-            All
-          </div>
-          {categories.map((category) => (
-            <div 
-              key={category.id}
-              className={`category-item ${selectedCategory === category.name ? 'active' : ''}`}
-              onClick={() => onCategorySelect(category.name)}
-            >
-              {category.name} ({category.count})
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-};
-
-const Tags = ({ tags, onTagSelect, selectedTags, extraClass }) => {
-  const handleTagClick = (tag) => {
-    onTagSelect(tag);
-  };
-  
-  return (
-    <div className={`tags-widget ${extraClass}`}>
-      <div className="widget-inner">
-        <h5 className="widget-title">Tags</h5>
-        <div className="tags-list">
-          {tags.map((tag, index) => (
-            <span 
-              key={index}
-              className={`tag-item ${selectedTags.includes(tag) ? 'active' : ''}`}
-              onClick={() => handleTagClick(tag)}
-            >
-              {tag}
-            </span>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-};
-
-const BooksPage = () => {
-  const [filteredBooks, setFilteredBooks] = useState(BookData);
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('');
-  const [selectedTags, setSelectedTags] = useState([]);
-  
-  const categories = [
-    { id: 1, name: "Literature", count: BookData.filter(book => book.category === "Literature").length },
-    { id: 2, name: "Mathematics", count: BookData.filter(book => book.category === "Mathematics").length },
-    { id: 3, name: "Science", count: BookData.filter(book => book.category === "Science").length },
-    { id: 4, name: "History", count: BookData.filter(book => book.category === "History").length },
-    { id: 5, name: "Languages", count: BookData.filter(book => book.category === "Languages").length }
-  ];
-  
-  const tags = ["Literature", "Fiction", "Science", "Math", "History", "Language", "Academic", "Reference"];
-
-  const handleSearch = (query) => {
-    setSearchQuery(query);
-  };
-
-  const handleCategorySelect = (category) => {
-    setSelectedCategory(category);
-  };
-
-  const handleTagSelect = (tag) => {
-    setSelectedTags(prev => 
-      prev.includes(tag) 
-        ? prev.filter(t => t !== tag)
-        : [...prev, tag]
-    );
-  };
-
-  useEffect(() => {
-    let result = BookData;
-
-    // Apply search filter
-    if (searchQuery) {
-      result = result.filter(book => 
-        book.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        book.author.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        book.description.toLowerCase().includes(searchQuery.toLowerCase())
-      );
-    }
-
-    // Apply category filter
-    if (selectedCategory) {
-      result = result.filter(book => book.category === selectedCategory);
-    }
-
-    // Apply tags filter
-    if (selectedTags.length > 0) {
-      result = result.filter(book => 
-        selectedTags.some(tag => 
-          book.category.includes(tag) || 
-          book.description.includes(tag)
-        )
-      );
-    }
-
-    setFilteredBooks(result);
-  }, [searchQuery, selectedCategory, selectedTags]);
-
-  return (
-    <div className="books-page">
-      <Layout>
-        <PageBanner
-          title="Books List"
-          rootUrl="/"
-          parentUrl="Home"
-          currentUrl="Books"
-        />
-
-        <div className="page-wrapper">
-          <div className="container">
-            <div className="books-content">
-              <div className="books-grid">
-                {filteredBooks.map((item) => (
-                  <BookGridItem key={item.id} data={item} />
-                ))}
-                
-                <div className="pagination">
-                  <button className="pagination-arrow">←</button>
-                  <button className="pagination-number active">1</button>
-                  <button className="pagination-number">2</button>
-                  <button className="pagination-number">3</button>
-                  <button className="pagination-arrow">→</button>
+        <div className="grid">
+          {classData.map((classInfo) => (
+            <div key={classInfo.class} className="card">
+              <div className="card-image">
+                <img
+                  src={classInfo.image || "/placeholder.svg"}
+                  alt={`Class ${classInfo.class} Books`}
+                />
+                <div className="class-badge">
+                  Class {classInfo.class}
                 </div>
               </div>
-              
-              <div className="sidebar">
-                <SearchWidget onSearch={handleSearch} />
-                <LatestBooks books={BookData} extraClass="widget-spacing" />
-                <Categories 
-                  categories={categories}
-                  onCategorySelect={handleCategorySelect}
-                  selectedCategory={selectedCategory}
-                  extraClass="widget-spacing"
-                />
-                <Tags 
-                  tags={tags}
-                  onTagSelect={handleTagSelect}
-                  selectedTags={selectedTags}
-                  extraClass="widget-spacing"
-                />
+
+              <div className="card-content">
+                <h3>Class {classInfo.class}</h3>
+                <div className="book-count">
+                  <svg viewBox="0 0 24 24" className="book-icon">
+                    <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                  </svg>
+                  <span>{classInfo.totalBooks} Books</span>
+                </div>
+              </div>
+
+              <div className="hover-content">
+                <h4>Book List:</h4>
+                <ul>
+                  {classInfo.books.map((book, index) => (
+                    <li key={index}>
+                      <span className="subject">{book.subject}:</span> {book.name}
+                    </li>
+                  ))}
+                </ul>
+                <a href={`/class/${classInfo.class}/books`} className="view-details">
+                  View Details
+                </a>
               </div>
             </div>
-          </div>
+          ))}
         </div>
-      </Layout>
+      </div>
     </div>
+    </Layout>
+    </>
   );
-};
+}
 
-export default BooksPage;
+export default BookGrid;
