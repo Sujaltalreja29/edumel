@@ -203,7 +203,7 @@ function BookGrid() {
                     </li>
                   ))}
                 </ul>
-                <a href={`/class/${classInfo.class}/books`} className="view-details">
+                <a href={`#`} className="view-details">
                   View Details
                 </a>
               </div>
