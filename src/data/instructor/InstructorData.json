@@ -4,56 +4,56 @@
       "name": "Rajesh Sharma",
       "designation": "Principal",
       "image": "teacher-1.jpg",
-      "imageLg": "team-1.jpg"
+      "imageLg": "prof.png"
     },
     {
       "id": 2,
       "name": "Anita Verma",
       "designation": "Vice Principal",
       "image": "teacher-2.jpg",
-      "imageLg": "team-2.jpg"
+      "imageLg": "teach.png"
     },
     {
       "id": 3,
       "name": "Vikram Singh",
       "designation": "Mathematics Teacher",
       "image": "teacher-3.jpg",
-      "imageLg": "team-1.jpg"
+      "imageLg": "prof.png"
     },
     {
       "id": 4,
       "name": "Pooja Iyer",
       "designation": "Science Teacher",
       "image": "teacher-4.jpg",
-      "imageLg": "team-2.jpg"
+      "imageLg": "teach.png"
     },
     {
       "id": 5,
       "name": "Manoj Nair",
       "designation": "English Teacher",
       "image": "teacher-5.jpg",
-      "imageLg": "team-1.jpg"
+      "imageLg": "prof.png"
     },
     {
       "id": 6,
       "name": "Ritika Das",
       "designation": "History Teacher",
       "image": "teacher-6.jpg",
-      "imageLg": "team-2.jpg"
+      "imageLg": "teach.png"
     },
     {
       "id": 7,
       "name": "Sandeep Chatterjee",
       "designation": "Physical Education Instructor",
       "image": "teacher-7.jpg",
-      "imageLg": "team-1.jpg"
+      "imageLg": "prof.png"
     },
     {
       "id": 8,
       "name": "Meera Joshi",
       "designation": "Librarian",
       "image": "teacher-8.jpg",
-      "imageLg": "team-2.jpg"
+      "imageLg": "teach.png"
     }
 ]
   

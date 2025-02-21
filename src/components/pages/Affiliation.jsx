@@ -40,13 +40,12 @@ const SchoolAffiliation = () => {
   return (
     <Layout>
                           <PageBanner
-                        title="Affiliation"
+                        title="School Affiliations"
                         rootUrl="/"
                         parentUrl="Home"
                         currentUrl="Affiliation"
                         />
       <div className="container my-5">
-        <h2 className="text-center mb-4">School Affiliations</h2>
         <Accordion>
           {affiliationData.map((affiliation) => (
             <Accordion.Item eventKey={affiliation.id.toString()} key={affiliation.id}>
@@ -82,13 +81,13 @@ const SchoolAffiliation = () => {
         <style>
           {`
             .accordion-button {
-              color: #0d6efd;
+              color: #015ABD;
               background-color: #fff;
               font-weight: 500;
             }
 
             .accordion-button:not(.collapsed) {
-              color: #0d6efd;
+              color: #015ABD;
               background-color: #f8f9fa;
             }
 

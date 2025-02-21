@@ -1,6 +1,8 @@
 import React from 'react';
 import './BookGrid.css';
 import Layout from '../../common/Layout';
+import jsPDF from 'jspdf';
+
 const classData = [
   {
     class: 1,
@@ -160,7 +162,26 @@ const classData = [
   },
 ];
 
+
 function BookGrid() {
+  const handleDownload = (classInfo) => {
+    // Create new PDF document
+    const doc = new jsPDF();
+    
+    // Add title
+    doc.setFontSize(16);
+    doc.text(`Class ${classInfo.class} Books`, 20, 20);
+    
+    // Add books list
+    doc.setFontSize(12);
+    classInfo.books.forEach((book, index) => {
+      doc.text(`${book.subject}: ${book.name}`, 20, 40 + (index * 10));
+    });
+    
+    // Save the PDF
+    doc.save(`Class_${classInfo.class}_Books.pdf`);
+  };
+
   return (
     <>
     <Layout>
@@ -195,17 +216,13 @@ function BookGrid() {
               </div>
 
               <div className="hover-content">
-                <h4>Book List:</h4>
-                <ul>
-                  {classInfo.books.map((book, index) => (
-                    <li key={index}>
-                      <span className="subject">{book.subject}:</span> {book.name}
-                    </li>
-                  ))}
-                </ul>
-                <a href={`#`} className="view-details">
-                  View Details
-                </a>
+              <h4>Book List:</h4>
+                <button 
+                  onClick={() => handleDownload(classInfo)} 
+                  className="view-details"
+                >
+                  Download
+                </button>
               </div>
             </div>
           ))}

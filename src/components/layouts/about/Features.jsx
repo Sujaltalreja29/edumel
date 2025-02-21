@@ -33,13 +33,12 @@ class About extends Component {
     }
     render() {
         return (
-        
             <section className="about-3 section-padding">
                 <div className="container">
                     <div className="row align-items-center justify-content-between">
                         <div className="col-xl-5 col-lg-6">
                             <div className="about-img">
-                                <img src={`https://th.bing.com/th/id/OIP.RSbKVQOA3pe-uebbWYAP4gHaEK?w=333&h=187&c=7&r=0&o=5&dpr=1.3&pid=1.7`} alt="" className="img-fluid" style={{height : "535px" , width : "470px"}}/>
+                                <img src={`https://th.bing.com/th/id/OIP.RSbKVQOA3pe-uebbWYAP4gHaEK?w=333&h=187&c=7&r=0&o=5&dpr=1.3&pid=1.7`} alt="" className="img-fluid"/>
                             </div>
                         </div>
                         <div className="col-xl-6 col-lg-6">

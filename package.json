@@ -9,6 +9,7 @@
     "emailjs-com": "^3.2.0",
     "fslightbox-react": "^1.7.6",
     "isotope-layout": "^3.0.6",
+    "jspdf": "^3.0.0",
     "lightbox.js-react": "^0.9.6",
     "lightbox2": "^2.11.4",
     "lucide-react": "^0.475.0",

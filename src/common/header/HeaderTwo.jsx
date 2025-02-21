@@ -2,6 +2,7 @@ import React from 'react';
 import { useState ,useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Nav from './Nav';
+import { MapPinHouse } from 'lucide-react';
 
 const HeaderTwo= () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -35,7 +36,9 @@ const HeaderTwo= () => {
                         <div className="row justify-content-between align-items-center">
                             <div className="col-xl-8 col-lg-8 col-sm-6">
                                 <div className="header-contact text-center text-sm-start text-lg-start">
-                                    <Link to="#">1010 Moon ave, New Delhi, IND</Link>
+                                    <div className='text-white'>
+                                    <MapPinHouse/> 1010 Moon ave, New Delhi, IND
+                                    </div>
                                 </div>
                             </div>
 

@@ -178,13 +178,13 @@ const FeesAndScholarship = () => {
         <style>
           {`
             .accordion-button {
-              color: #0d6efd;
+              color: #015ABD;
               background-color: #fff;
               font-weight: 500;
             }
 
             .accordion-button:not(.collapsed) {
-              color: #0d6efd;
+              color: #015ABD;
               background-color: #f8f9fa;
             }
 

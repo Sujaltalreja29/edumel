@@ -17,7 +17,7 @@ class InstructorGrid extends Component {
                             <div className="col-lg-3 col-md-6 col-sm-6"  key={ data.id }>
                                 <div className="team-item mb-5">
                                     <div className="team-img">
-                                    <img src={`${process.env.PUBLIC_URL}/assets/images/team/${data.imageLg}`} alt="" className="img-fluid" style={{width:"232px" , height : "308px"}}/>
+                                    <img src={`${process.env.PUBLIC_URL}/assets/images/team/${data.imageLg}`} alt="" className="img-fluid"/>
 
                                         <ul className="team-socials list-inline">
                                             <li className="list-inline-item"><Link to={data.facebookUrl}><i className="fab fa-facebook-f"></i></Link></li>
