@@ -31,7 +31,7 @@ const TransferCertificate = () => {
               </div>
               <div className="col-lg-12 mb-4">
                 <div className="text-center">
-                  <button className="btn btn-main w-100 rounded" onClick={handleDownload} type="submit">Download Certificate (PDF)</button>
+                  <button className="btn btn-m  ain w-100 rounded" onClick={handleDownload} type="submit">Download Certificate (PDF)</button>
                 </div>
               </div>
             </div>

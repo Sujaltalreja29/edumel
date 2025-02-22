@@ -13,7 +13,7 @@ const LegendItem = ({ color, label }) => (
 const HolidaySection = ({ title, backgroundColor, textColor = "inherit", children }) => (
   <div className="holiday-section">
     <div className="section-header" style={{ backgroundColor }}>
-      <h3 className="section-title" style={{ color: textColor }}>{title}</h3>
+      <h3 className="section-title" style={{ color: textColor , marginBottom : "0px" }}>{title}</h3>
     </div>
     <div className="section-content">
       {children}
