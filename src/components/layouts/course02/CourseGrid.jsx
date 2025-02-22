@@ -1,10 +1,12 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect, useRef } from 'react';
 import CourseType from '../course02/CourseType';
 import { activityData, schoolActivities, achievements, sports, communityService, olympiad, cbseActivities } from '../../../data/course/data.js';
 
 const CourseGrid = ({ page }) => {
     const [searchQuery, setSearchQuery] = useState('');
     const [sortOrder, setSortOrder] = useState('default');
+    const [visibleItems, setVisibleItems] = useState(6);
+    const loaderRef = useRef(null);
 
     const schoolData = [
         { category: "Curricular", data: activityData },
@@ -28,14 +30,12 @@ const CourseGrid = ({ page }) => {
     ];
 
     const filteredAndSortedItems = useMemo(() => {
-        // First, filter by search query
         let items = !searchQuery.trim()
             ? allCourseItems
             : allCourseItems.filter(item =>
                 item.title.toString().toLowerCase().includes(searchQuery.toLowerCase())
             );
 
-        // Then, sort the filtered items
         switch (sortOrder) {
             case 'a-z':
                 items = [...items].sort((a, b) => a.title.localeCompare(b.title));
@@ -53,12 +53,39 @@ const CourseGrid = ({ page }) => {
                 break;
         }
 
-        return items.slice(0, 8);
+        return items;
     }, [allCourseItems, searchQuery, sortOrder]);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            const firstEntry = entries[0];
+            if (firstEntry.isIntersecting && visibleItems < filteredAndSortedItems.length) {
+                setTimeout(() => {
+                    setVisibleItems(prev => Math.min(prev + 6, filteredAndSortedItems.length));
+                }, 500); // Added small delay for smoother loading
+            }
+        }, {
+            threshold: 0.1,
+            rootMargin: '50px'
+        });
+
+        if (loaderRef.current) {
+            observer.observe(loaderRef.current);
+        }
+
+        return () => {
+            if (loaderRef.current) {
+                observer.unobserve(loaderRef.current);
+            }
+        };
+    }, [visibleItems, filteredAndSortedItems.length]);
 
     const handleSearch = (e) => {
         e.preventDefault();
+        setVisibleItems(6); // Reset visible items when searching
     };
+
+    const visibleCourses = filteredAndSortedItems.slice(0, visibleItems);
 
     return (
         <section className="section-padding page">
@@ -67,7 +94,7 @@ const CourseGrid = ({ page }) => {
                     <div className="row align-items-center">
                         <div className="col-lg-4">
                             <p>
-                                Showing {filteredAndSortedItems.length} of {allCourseItems.length} results
+                                Showing {visibleCourses.length} of {filteredAndSortedItems.length} results
                             </p>
                         </div>
 
@@ -76,7 +103,10 @@ const CourseGrid = ({ page }) => {
                                 <select
                                     className="form-control"
                                     value={sortOrder}
-                                    onChange={(e) => setSortOrder(e.target.value)}
+                                    onChange={(e) => {
+                                        setSortOrder(e.target.value);
+                                        setVisibleItems(6); // Reset visible items when sorting
+                                    }}
                                 >
                                     {sortOptions.map((option) => (
                                         <option key={option.value} value={option.value}>
@@ -107,12 +137,25 @@ const CourseGrid = ({ page }) => {
 
             <div className="container">
                 <div className="row">
-                    {filteredAndSortedItems.length > 0 ? (
-                        filteredAndSortedItems.map((item) => (
-                            <div className="col-xl-4 col-lg-6 col-md-6" key={item.id}>
-                                <CourseType data={item} category={category}/>
-                            </div>
-                        ))
+                    {visibleCourses.length > 0 ? (
+                        <>
+                            {visibleCourses.map((item) => (
+                                <div className="col-xl-4 col-lg-6 col-md-6" key={item.id}>
+                                    <CourseType data={item} category={category}/>
+                                </div>
+                            ))}
+                            {visibleItems < filteredAndSortedItems.length && (
+                                <div 
+                                    ref={loaderRef} 
+                                    className="col-12 text-center py-4"
+                                    style={{ minHeight: '100px' }}
+                                >
+                                    <div className="spinner-border text-primary" role="status">
+                                        <span className="visually-hidden">Loading...</span>
+                                    </div>
+                                </div>
+                            )}
+                        </>
                     ) : (
                         <div className="col-12 text-center">
                             <p className="mt-4">No results found for: {searchQuery}</p>
