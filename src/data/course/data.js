@@ -41,6 +41,34 @@ export const activityData = [
     date: "2024-02-05",
     img: "https://th.bing.com/th/id/OIP.MnGZHfZfNOz-xXAS8aDW8QHaEK?w=298&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7",
   },
+  {
+    id: 6,
+    post: "Chess Club",
+    title: "Strategies & Tactics: Learn Chess Like a Pro",
+    date: "2024-02-12",
+    img: "https://images.pexels.com/photos/260024/pexels-photo-260024.jpeg?auto=compress&cs=tinysrgb&w=600",
+  },
+  {
+    id: 7,
+    post: "Dance Workshop",
+    title: "Hip-Hop & Contemporary Dance Basics",
+    date: "2024-01-30",
+    img: "https://images.pexels.com/photos/1701192/pexels-photo-1701192.jpeg?auto=compress&cs=tinysrgb&w=600",
+  },
+  {
+    id: 8,
+    post: "Science Club",
+    title: "Hands-on Experiments & Robotics",
+    date: "2024-02-08",
+    img: "https://images.pexels.com/photos/256302/pexels-photo-256302.jpeg?auto=compress&cs=tinysrgb&w=600",
+  },
+  {
+    id: 9,
+    post: "Photography Club",
+    title: "Introduction to DSLR & Mobile Photography",
+    date: "2024-02-15",
+    img: "https://images.pexels.com/photos/140144/pexels-photo-140144.jpeg?auto=compress&cs=tinysrgb&w=600",
+  },
 ];
 
 export const schoolActivities = [
